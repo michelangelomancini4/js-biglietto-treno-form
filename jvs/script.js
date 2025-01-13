@@ -6,10 +6,11 @@ let chilometriUtente = parseInt(prompt("inserisci il numero di chilometri da far
 // input età
 let etaUtente = parseInt(prompt("inserisci una età (un numero)"));
 
-// console.log(chilometriUtente, etaUtente);
+console.log(chilometriUtente, etaUtente);
 
 // ELABORAZIONE 
 // calcolare il prezzo del biglietto in base ai km (0.21 € al km)
+
  
  // SE l'utente ha <18 anni (minorenne)
  if (etaUtente < 18){
