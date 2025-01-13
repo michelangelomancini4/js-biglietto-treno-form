@@ -9,11 +9,14 @@ const etaUtente =document.getElementById('age');
 // richiamo button
 let button = document.getElementById('calcbutton');
 
+// richiamo output
+const outputParagraph = document.getElementById('clientpage')
+
 // aggiunta event al click del button
 
 button.addEventListener('click',()=> {
-    const chilometri = (chilometriUtente.value);
-    const eta = (etaUtente.value);
+    const chilometri = chilometriUtente.value.trim();
+    const eta = etaUtente.value.trim();
     console.log("I km da perccorrere sono:",chilometri,"-","La tua età è di anni:", eta);
     
     let risultato ;
@@ -41,9 +44,14 @@ button.addEventListener('click',()=> {
         console.log("Pagherai:", risultato.toFixed( 2 ), "€"  );
     }
 
+    // regole output MILESTONE 2
+   if (chilometri + eta + risultato){
+    outputParagraph.innerText = (chilometri + eta + risultato);
 
+    chilometriUtente.value = "";
+    etaUtente.value = "";
 
-
+   }
 
 });
 // funzione di default
